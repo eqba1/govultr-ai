@@ -39,7 +39,7 @@ func main() {
     
     response, err := client.SimpleChatCompletion(
         context.Background(),
-        "llama2-7b-chat-Q5_K_M",
+        vultrai.Llama33_70bInstructFp8,
         "Tell me about Go programming language",
     )
     if err != nil {
@@ -83,7 +83,7 @@ client := vultrai.NewClient(
 ```go
 response, err := client.SimpleChatCompletion(
     ctx, 
-    "llama2-7b-chat-Q5_K_M",
+    vultrai.Llama33_70bInstructFp8,
     "What is artificial intelligence?",
 )
 ```
@@ -98,7 +98,7 @@ messages := []vultrai.Message{
 
 response, err := client.ChatWithMessages(
     ctx,
-    "llama2-13b-chat-Q5_K_M",
+    vultrai.Llama33_70bInstructFp8,
     messages,
     vultrai.WithMaxTokens(200),
     vultrai.WithTemperature(0.7),
@@ -111,7 +111,7 @@ response, err := client.ChatWithMessages(
 
 ```go
 request := vultrai.ChatCompletionRequest{
-    Model: "llama2-7b-chat-Q5_K_M",
+    Model: vultrai.Llama33_70bInstructFp8,
     Messages: []vultrai.Message{
         {Role: "user", Content: "Write a short story"},
     },
@@ -143,7 +143,7 @@ client.AddItem(ctx, collection.Collection.ID, vultrai.AddItemRequest{
 // Query with context
 response, err := client.CreateRAGChatCompletion(ctx, vultrai.RAGChatCompletionRequest{
     Collection: collection.Collection.ID,
-    Model: "llama2-7b-chat-Q5_K_M",
+    Model: vultrai.Llama33_70bInstructFp8,
     Messages: []vultrai.Message{
         {Role: "user", Content: "Who developed Go?"},
     },
