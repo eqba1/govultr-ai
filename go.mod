@@ -1,4 +1,4 @@
-module github.com/eqba1/govultr-ai
+module github.com/eqba1/vultrai
 
 go 1.22.5
 

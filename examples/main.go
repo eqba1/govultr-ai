@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	vultrai "github.com/eqba1/govultr-ai"
+	vultrai "github.com/eqba1/vultrai"
 )
 
 // DefaultModel is the default model to use in examples
